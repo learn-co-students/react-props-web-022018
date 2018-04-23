@@ -2,7 +2,7 @@
 
 ## Overview
 
-We'll cover props and show how they help us make our components more dynamic and reusable. 
+We'll cover props and show how they help us make our components more dynamic and reusable.
 
 ## Objectives
 1. Explain how props make our components more dynamic and reusable
@@ -64,7 +64,7 @@ There's a small code style issue at play here: our line with the `MovieCard` com
 
 ```jsx
 ReactDOM.render(
-  <MovieCard 
+  <MovieCard
     title="Mad Max: Fury Road"
     poster="http://image.tmdb.org/t/p/w342/kqjL17yufvn9OVLyXYpvtyrFfak.jpg"
     genres={['Action', 'Adventure', 'Science Fiction', 'Thriller']}
@@ -79,7 +79,7 @@ Notice how we passed in the genres as an inline array? We could also pass in var
 const madMaxGenres = ['Action', 'Adventure', 'Science Fiction', 'Thriller'];
 
 ReactDOM.render(
-  <MovieCard 
+  <MovieCard
     title="Mad Max: Fury Road"
     poster="http://image.tmdb.org/t/p/w342/kqjL17yufvn9OVLyXYpvtyrFfak.jpg"
     genres={madMaxGenres}
@@ -99,8 +99,8 @@ class MovieCard extends React.Component {
     return (
       <div className="movie-card">
         <img  
-          src={this.props.poster} 
-          alt={this.props.title} 
+          src={this.props.poster}
+          alt={this.props.title}
         />
         <h2>{this.props.title}</h2>
         <small>Genres: {this.props.genres.join(', ')}</small>
@@ -119,7 +119,7 @@ ReactDOM.render(
   <MovieCard
     title="Jurassic World"
     poster="http://image.tmdb.org/t/p/w342/jjBgi2r5cRt36xF6iNUEhzscEcb.jpg"
-    genres={jurassicWorldGenres} 
+    genres={jurassicWorldGenres}
   />,
   document.getElementById('root')
 );
@@ -146,7 +146,7 @@ const jurassicWorldGenres = ['Action', 'Adventure', 'Science Fiction', 'Thriller
 ReactDOM.render(
   <MovieCard
     title="Jurassic World"
-    genres={jurassicWorldGenres} 
+    genres={jurassicWorldGenres}
   />,
   document.getElementById('root')
 );
@@ -159,3 +159,5 @@ Now, whenever we omit the `poster` prop, or if it's undefined, the `MovieCard` c
 - [Babel: transform-class-properties](http://babeljs.io/docs/plugins/transform-class-properties/)
 
 <p class='util--hide'>View <a href='https://learn.co/lessons/react-props'>Props</a> on Learn.co and start learning to code for free.</p>
+
+done
